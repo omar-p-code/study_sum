@@ -13,13 +13,13 @@ function App() {
     document.documentElement.classList.add(dark ? 'dark' : 'light')
   })
   return (
-    <>
+    <main>
       <Header />
       <Routes>
         <Route index element={<Home />} />
       </Routes>
       <Footer />
-    </>
+    </main>
   )
 }
 

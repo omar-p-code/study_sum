@@ -82,6 +82,8 @@
 
   :root {
     color-scheme: light dark;
+    overflow-x: hidden;
+    width: 100vw;
   }
 
   body {
@@ -118,5 +120,17 @@
 
   .btn-secondary {
     @apply bg-secondary text-white hover:bg-secondary-hover;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-start {
+    @apply flex justify-start items-start;
+  }
+
+  .flex-end {
+    @apply flex justify-end items-end;
   }
 }
