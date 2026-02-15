@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* =========================================================
+  THEME TOKENS — Academic Study Theme
+========================================================= */
+
+@theme {
+
+  /* ========== Brand (Academic Blue) ========== */
+  --color-primary:        #1e3a8a;   /* Deep academic blue */
+  --color-primary-hover:  #1e40af;
+
+  --color-secondary:      #0f766e;   /* Calm teal */
+  --color-secondary-hover:#0d9488;
+
+  --color-accent:         #6d28d9;   /* Soft purple highlight */
+  --color-accent-hover:   #7c3aed;
+
+  /* ========== Surfaces ========== */
+  --color-background:     #f8fafc;   /* Soft off-white */
+  --color-surface:        #ffffff;
+  --color-surface-hover:  #f1f5f9;
+
+  /* ========== Text ========== */
+  --color-text:           #0f172a;   /* Dark slate */
+  --color-text-secondary: #334155;
+  --color-muted:          #64748b;
+
+  /* ========== Borders ========== */
+  --color-border:         #e2e8f0;
+  --color-border-subtle:  #f1f5f9;
+
+  /* ========== Radius & Shadow ========== */
+  --radius:               0.75rem;
+  --shadow-sm:            0 1px 3px rgba(15,23,42,0.08);
+  --shadow-md:            0 6px 16px rgba(15,23,42,0.12);
+
+  --transition:           200ms cubic-bezier(.4,0,.2,1);
+}
+
+
+/* =========================================================
+  DARK THEME — Study Night Mode
+========================================================= */
+
+.dark {
+
+  /* Brand */
+  --color-primary:        #60a5fa;   /* Softer blue for dark */
+  --color-primary-hover:  #3b82f6;
+
+  --color-secondary:      #2dd4bf;
+  --color-secondary-hover:#14b8a6;
+
+  --color-accent:         #a78bfa;
+  --color-accent-hover:   #8b5cf6;
+
+  /* Surfaces */
+  --color-background:     #0b1120;   /* Deep navy */
+  --color-surface:        #111827;
+  --color-surface-hover:  #1f2937;
+
+  /* Text */
+  --color-text:           #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-muted:          #94a3b8;
+
+  /* Borders */
+  --color-border:         #1f2937;
+  --color-border-subtle:  #334155;
+
+  --shadow-sm:            0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:            0 6px 20px rgba(0,0,0,0.6);
+}
+
+
+/* =========================================================
+  BASE
+========================================================= */
+
+@layer base {
+
+  :root {
+    color-scheme: light dark;
+  }
+
+  body {
+    @apply antialiased bg-background text-text;
+  }
+
+  *, ::before, ::after {
+    @apply transition;
+  }
+}
+
+
+/* =========================================================
+  COMPONENTS
+========================================================= */
+
+@layer components {
+
+  .card {
+    @apply bg-surface border border-border p-4 rounded-xl shadow-sm transition;
+  }
+
+  .card:hover {
+    @apply bg-surface-hover shadow-md;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-xl font-medium transition;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-hover;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-hover;
+  }
+}
