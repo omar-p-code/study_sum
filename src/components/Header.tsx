@@ -42,7 +42,7 @@ function Header() {
 
                            {/* Active underline */}
                            {isActive && (
-                              <span className="absolute left-0 -bottom-2 h-[2px] w-full bg-primary rounded-full" />
+                              <span className="absolute left-0 -bottom-2 h-0.5 w-full bg-primary rounded-full" />
                            )}
                         </Link>
                      );

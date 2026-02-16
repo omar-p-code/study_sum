@@ -31,7 +31,7 @@ function Footer() {
             }
             )}
          </ul>
-         <div className="flex flex-col justify-center items-start gap-3 border-border border-l pl-10 text-text h-full text-text-secondary min-w-[30vw]">
+         <div className="flex flex-col justify-center items-start gap-3 border-border border-l pl-10 text-text h-full min-w-[30vw]">
             {contactInfo.email && <Box className={clsx('flex gap-2')}>
                <EmailIcon className='text-secondary' />
                <div className="font-bold">

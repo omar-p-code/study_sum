@@ -45,7 +45,7 @@ function Hero() {
             className='absolute w-full h-full -z-10 left-0 top-0 opacity-30 object-cover object-center'
          />
          <div className='min-w-[max(350px,30vw)]'>
-            <h1 className={clsx('font-bold text-3xl leading-tight')}>
+            <h1 className={clsx('font-bold text-3xl leading-tight max-sm:min-h-20')}>
                Summarize
                <span
                   className="text-primary font-extrabold"> Your</span>
