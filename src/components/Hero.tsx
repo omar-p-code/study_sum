@@ -2,43 +2,50 @@ import SummarizeIcon from '@mui/icons-material/Summarize';
 import AvTimerIcon from '@mui/icons-material/AvTimer';
 import LeaderboardIcon from '@mui/icons-material/Leaderboard';
 import AssistantIcon from '@mui/icons-material/Assistant';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import clsx from "clsx";
 import TextType from "./TextTypet";
 import Carousel from "./Carousel";
 import type { CarouselItem } from "../constants";
+import Button from '@mui/material/Button'
 
 export const carouselItems: CarouselItem[] = [
    {
       title: 'Summarize',
-      description: 'Summarize your Subjects',
+      description: 'Write structured summaries of your lessons with expandable points and subpoints. Keep all your notes organized and easy to revisit.',
       id: 1,
       icon: <SummarizeIcon className='text-primary' />
    },
    {
       title: 'Assistant',
-      description: 'Study more with your best partner |sumy|',
+      description: 'Get contextual help, suggestions, or reminders while you study.',
       id: 2,
       icon: <AssistantIcon className='text-primary' />
    },
    {
       title: 'Planner',
-      description: 'Make the best plan to achive your goal',
+      description: 'Plan your study schedule effectively. Set priorities, deadlines, and see your tasks at a glance.',
       id: 3,
       icon: <LeaderboardIcon className='text-primary' />
    },
    {
-      title: 'Time Manager',
-      description: 'Track and manage your day time',
-      id: 4,
+      title: 'Study',
+      description: 'Organize your lessons and subjects in a clear hierarchy. Quickly navigate through topics, check details, and track your progress.',
+      id: 5,
       icon: <AvTimerIcon className='text-primary' />
    },
 ]
 
 function Hero() {
    return (
-      <section className="flex max-md:flex-col md:justify-between justify-center lg:justify-center items-center w-dvw min-h-52 px-10 py-15 text-start max-w-dvw overflow-hidden gap-10">
+      <section id='hero' className='max-md:flex-col md:justify-between justify-center lg:justify-center items-center text-start gap-10'>
+         <img
+            src="/studyBg.png"
+            alt="Hero Bg"
+            className='absolute w-full h-full -z-10 left-0 top-0 opacity-30 object-cover object-center'
+         />
          <div className='min-w-[max(350px,30vw)]'>
-            <h1 className={clsx('font-bold text-3xl')}>
+            <h1 className={clsx('font-bold text-3xl leading-tight')}>
                Summarize
                <span
                   className="text-primary font-extrabold"> Your</span>
@@ -64,6 +71,15 @@ function Hero() {
                loop
             />
          </div>
+
+         <Button
+            variant="text"
+            color='primary'
+            style={{ position: 'absolute', bottom: 10, left: '50%', transform: 'translateX(-50%)' }}
+            onClick={() => location.href = '#about'}
+         >
+            <KeyboardDoubleArrowDownIcon sx={{ fontSize: 35 }} className='animate-bounce drop-shadow-md drop-shadow-black' />
+         </Button>
       </section>
    )
 }

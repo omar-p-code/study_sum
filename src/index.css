@@ -84,6 +84,7 @@
     color-scheme: light dark;
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
   }
 
   body {
@@ -92,6 +93,10 @@
 
   *, ::before, ::after {
     @apply transition;
+  }
+
+  section {
+    @apply flex w-dvw min-h-52 px-10 py-15 max-w-dvw overflow-hidden relative
   }
 }
 

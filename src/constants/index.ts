@@ -39,6 +39,11 @@ export interface About {
    bio?: string,
    contactInfo: ContactInfo,
    about?: string,
+   detaildAbout: {
+      intro: string[],
+      keyFeatures: object
+      why: string[]
+   }
 }
 
 export interface StudySum {
@@ -57,16 +62,16 @@ export const headerLinks = [
       path: '/'
    },
    {
-      name: 'About',
-      path: '/about'
+      name: 'Study',
+      path: '/study'
+   },
+   {
+      name: 'Summarize',
+      path: '/summarize'
    },
    {
       name: 'quizzes',
       path: '/quizzes'
-   },
-   {
-      name: 'Contact',
-      path: '/contact'
    },
 ]
 
@@ -76,16 +81,16 @@ export const footerLinks = [
       path: '/'
    },
    {
-      name: 'About',
-      path: '/about'
+      name: 'Study',
+      path: '/study'
+   },
+   {
+      name: 'Summarize',
+      path: '/summarize'
    },
    {
       name: 'quizzes',
       path: '/quizzes'
-   },
-   {
-      name: 'Contact',
-      path: '/contact'
    },
 ]
 
@@ -97,5 +102,33 @@ export const contactInfo: ContactInfo = {
 
 export const about: About = {
    contactInfo,
-   about: "The study_sum program is one I designed for training and honing my user interface and server development skills. I plan to develop it into a comprehensive web application later, but currently it's limited to summarizing my high school study materials and putting them into the application, thus achieving two goals at once."
+   about: "Study_Sum is a personal project I designed to train and improve my user interface and server-side development skills. Currently, the program focuses on summarizing my high school study materials and organizing them efficiently within the application.",
+   detaildAbout: {
+      intro: [
+         "*Study_sum* is a personal project I designed to train and improve my user interface and server-side development skills. Currently, the program focuses on summarizing my high school study materials and organizing them efficiently within the application.",
+         "Although it's a simple tool now, the goal is to gradually develop it into a full-featured web application. This approach allows me to achieve two objectives at once: improving my development skills while creating a practical study aid."
+      ],
+      keyFeatures: {
+         Summarize: {
+            state: "Planned",
+            text: "Write and organize lesson summaries with expandable points"
+         },
+         Study: 
+         {
+            state: "Planned",
+            text: "Structure and manage your subjects and lessons for easy navigation"
+         },
+         Planner: {
+            state: "Planned", 
+            text:"Set study schedules, priorities, and track progress"
+         },
+         Assistant: {
+            state: "Planned",
+            text:"Contextual guidance and suggestions while studying"
+         },
+      },
+      why: [
+         "It’s minimal, practical, and focused on real study workflows, helping you organize materials efficiently while giving me a platform to experiment and improve my development skills."
+      ]
+   }
 }

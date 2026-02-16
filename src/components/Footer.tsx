@@ -19,9 +19,8 @@ function Footer() {
             {footerLinks.map(link => {
                const isActive = location.pathname === link.path
                return (
-                  <li>
+                  <li key={link.path}>
                      <Link
-                        key={link.path}
                         to={link.path}
                         className={clsx('hover:font-extrabold transition-all duration-100', isActive && 'font-extrabold text-text-secondary')}
                      >
