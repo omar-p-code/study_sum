@@ -8,7 +8,7 @@ function Header() {
    const location = useLocation();
 
    return (
-      <header className="bg-surface border-b border-border shadow-sm sticky top-0 z-50 w-dvw">
+      <header className="bg-surface border-b border-border shadow-sm sticky top-0 z-99999 w-dvw">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
 

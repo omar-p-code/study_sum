@@ -96,7 +96,20 @@
   }
 
   section {
-    @apply flex w-dvw min-h-52 px-10 py-15 max-w-dvw overflow-hidden relative
+    @apply flex w-dvw min-h-52 lg:px-10 lg:py-15 md:py-7.5 md:px-5 py-3.25 px-2.5 max-w-dvw overflow-hidden relative
+  }
+
+  ::-webkit-scrollbar-thumb{
+    @apply bg-accent rounded-md transition duration-300;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-accent-hover;
+  }
+  ::-webkit-scrollbar {
+    @apply w-1.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-surface;
   }
 }
 
@@ -137,5 +150,48 @@
 
   .flex-end {
     @apply flex justify-end items-end;
+  }
+
+  .title {
+    @apply relative;
+    &::before {
+      content: attr(data-set);
+      @apply absolute left-2 -top-1.5 bg-surface-hover rounded-sm px-2 py-0 text-xs;
+    }
+  }
+
+  .subject {
+    @apply bg-surface w-full p-3 rounded-md border-border border border-e-transparent hover:bg-surface-hover has-[.item:hover]:bg-surface gap-5 flex flex-col;
+
+    h2 {
+      @apply mb-2;
+    }
+    p {
+      @apply mb-5;
+    }
+
+    .level-1 { @apply lg:ms-0 md:ms-0 ms-0 max-w-[min(85%,75vw)]; }
+    .level-2 { @apply lg:ms-6 md:ms-3 ms-1.5 max-w-[min(85%,75vw)]; }
+    .level-3 { @apply lg:ms-12 md:ms-6 ms-3 max-w-[min(85%,75vw)]; }
+    .level-4 { @apply lg:ms-18 md:ms-9 ms-4.5 max-w-[min(85%,75vw)]; }
+    .level-5 { @apply lg:ms-24 md:ms-12 ms-6 max-w-[min(85%,75vw)]; }
+
+    .item {
+        @apply bg-surface w-full py-5 ps-5 rounded-md border border-border transition cursor-pointer hover:bg-surface-hover relative;
+        
+        &.close {
+          animation: close  .5s 1 linear both;
+          @apply border-accent border;
+        }
+
+        &:not(.close) {
+          animation: open .5s 1 linear both ;
+          @apply wrap-break-word;
+          }  
+
+          .close-icon {
+            @apply absolute -top-5 -left-5;
+          }
+      }
   }
 }

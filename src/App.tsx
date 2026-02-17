@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import { useEffect } from "react";
 import study_sum from "./store";
 import type { StudySum } from "./constants";
+import Study from "./components/Study";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Home />} />
+        <Route path='/study' element={<Study />} />
       </Routes>
       <Footer />
     </main>
